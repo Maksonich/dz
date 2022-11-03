@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>dz</h2>
+    <script>
+        let ft = ""
+        let star = "*";
+        let num = 0;
+       for (; num < 6; num++){
+        ft += star
+        console.log(ft)
+       }
+        ///////////////////////////
+       
+        let two = 2
+        let operand2 = 2
+        let result = 0;
+        for (let i = 1; i < 8 ; i++){
+             two *= operand2;
+            
+        }
+       console.log(two)
+        ////////////////////////////////
+        let i = 0,j = 0;
+        let max = 5;
+        let spaceAmount = 4;
+        while (i < max) {
+        space = "";
+        stars = "";
+        for (j = 0; j < spaceAmount - i; j++) space += " ";
+        for (j = 0; j < 2 * i + 1; j++) stars += "*";
+        console.log(space + stars);
+        i++;
+        }
+    </script>
+</body>
+</html>
