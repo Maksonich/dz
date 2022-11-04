@@ -38,6 +38,25 @@
         console.log(space + stars);
         i++;
         }
+
+        /////////////////////////////////
+        let date = new Date()
+        let hour = date.getHours()
+        let say ;
+
+        if (hour < 5 ){
+            say = "Доброй ночи"
+        } else if (hour < 11){
+            say = "Доброе утро"
+        } else if (hour < 17){
+            say = "Доброе день"
+        }else if (hour < 22){
+            say = "Доброе вечер"
+        } else{
+            say = "Доброй ночи"
+        }
+
+        alert (say)
     </script>
 </body>
 </html>
