@@ -9,54 +9,266 @@
 <body>
     <h2>dz</h2>
     <script>
-        let ft = ""
-        let star = "*";
-        let num = 0;
-       for (; num < 6; num++){
-        ft += star
-        console.log(ft)
-       }
-        ///////////////////////////
-       
-        let two = 2
-        let operand2 = 2
-        let result = 0;
-        for (let i = 1; i < 8 ; i++){
-             two *= operand2;
+        //2.3
+        // {
+        // let ft = ""
+        // let star = "*";
+        // let num = 0;
+        //     for (; num < 6; num++){
+        //         ft += star
+        //         console.log(ft)
+        //     }
+        // }    
+           ///////////////////////////
+
+    //    {
+    //     let two = 2
+    //     let operand2 = 2
+    //     let result = 0;
+    //     for (let i = 1; i < 8 ; i++){
+    //          two *= operand2;
             
-        }
-       console.log(two)
+    //     }
+    //    console.log(two)}
         ////////////////////////////////
-        let i = 0,j = 0;
-        let max = 5;
-        let spaceAmount = 4;
-        while (i < max) {
-        space = "";
-        stars = "";
-        for (j = 0; j < spaceAmount - i; j++) space += " ";
-        for (j = 0; j < 2 * i + 1; j++) stars += "*";
-        console.log(space + stars);
-        i++;
-        }
-
+        // {
+        //     let i = 0,j = 0;
+        //     let max = 5;
+        //     let spaceAmount = 4;
+        //     while (i < max) {
+        //     space = "";
+        //     stars = "";
+        //     for (j = 0; j < spaceAmount - i; j++) space += " ";
+        //     for (j = 0; j < 2 * i + 1; j++) stars += "*";
+        //     console.log(space + stars);
+        //     i++;
+        //     }
+        // }
         /////////////////////////////////
-        let date = new Date()
-        let hour = date.getHours()
-        let say ;
+        // {
+    //     let date = new Date()
+    //     let hour = date.getHours()
+    //     let say ;
 
-        if (hour < 5 ){
-            say = "Доброй ночи"
-        } else if (hour < 11){
-            say = "Доброе утро"
-        } else if (hour < 17){
-            say = "Доброе день"
-        }else if (hour < 22){
-            say = "Доброе вечер"
-        } else{
-            say = "Доброй ночи"
+    //     if (hour < 5 ){
+    //         say = "Доброй ночи"
+    //     } else if (hour < 11){
+    //         say = "Доброе утро"
+    //     } else if (hour < 17){
+    //         say = "Доброе день"
+    //     }else if (hour < 22){
+    //         say = "Доброе вечер"
+    //     } else{
+    //         say = "Доброй ночи"
+    //     }
+
+    //    alert(say)}
+        
+//2.7
+{
+
+    let num = 14;
+    let say = "";
+    if(num % 100 >= 1 || num % 100 < 4){
+        switch(num % 10){
+            case 1 :
+                say = "a";
+                break;
+            case 2:
+            case 3:
+            case 4:
+                say = "ы"
+                break;
+        }
+    }
+    
+    console.log(`На ветке сидит ${num} ворон${say}`)
+ }   
+//
+//3.1
+//  function printRow(quantitySpace,quantitySymbol,symbolSpace, symbol){
+//     let i = 0
+//     while ( i < quantitySymbol){
+//         for (let j = 0; j < quantitySymbol; j++) symbol += "*"
+        
+//     }
+//     console.log(symbolSpace + symbol)
+//     i++
+//     }
+
+// printRow(4,5," ","*")
+
+// 3.2
+
+function stepen(operand1,operand2){
+    let result = operand1
+    for ( let i = 1; i < operand2; i++){
+       result *= operand1;
+
+    }   
+    return result;
+    }
+console.log(stepen(2,4))
+
+    //3.3
+ function compare(x) {
+
+   return  function (y){
+        if (x > y){
+            return 1
+        } else if (x < y){
+            return -1
+        } else if (x == y){
+            return null
+        }
+    }
+ }
+ var result = compare(2)
+console.log(result( 3))
+/// 3.5 
+
+
+function table (name1, quantity1,name2,quantity2,rows, num){
+    let id = 0;
+    let count = rows * num
+    let numInRow = 0;
+    let result = "";
+    
+    while (id < count){
+
+        for (let i = 2; i < quantity1; i++){
+            result += name1;
+            id++;
+            setWhiteSpace()
         }
 
-       alert(say)
-    </script>
+        for (let i = 0; i < quantity2; i++){
+            result += name2;
+            id++;
+            setWhiteSpace()
+        }
+    }
+        console.log(result)
+
+        function setWhiteSpace(){
+            numInRow++
+            if (numInRow === num){
+                result += "\n"
+                numInRow = 0;;
+            }else {
+                result += "\t";
+            }
+        }
+}
+table ("car", 4 , "bus", 3, 5,8)
+//3.6 
+ function printNumbers(max, cols) {
+    let stringsCount = Math.ceil(max / cols);
+    let result = '';
+for (let i = 0; i < stringsCount; i++) {
+
+    let line = ''; 
+    let step = i;
+    for (let g = 1; g <= cols; g++) {
+        if (step < max) {
+            line = line + step + ' ';
+            step = step + stringsCount;
+        }
+    }
+
+    result += line + '\n';
+  
+
+}
+
+return result;
+
+};
+console.log(printNumbers(11, 4));
+
+//4.2
+    let product = {
+        name: "Milk",
+        brand : "Zarechie",
+        price :29.5,
+        show : function  (){
+            console.log(`Product : ${this.name}, price : ${this.price}`)
+        }
+    }
+   
+    let product2 = {
+        name: "Bread",
+        brand : "Kulinichi",
+        price :20.00,
+        show : function(){
+            console.log(`Product : ${this.name}, price : ${this.price}`)
+        }
+    }
+    product.show()
+    product2.show()
+    // //4.3
+
+    {let fibsArr = [0, 1]
+    for ( let i = 2; i < 20; i++){
+        fibsArr[i] = fibsArr[i-1] + fibsArr[i-2];
+    }
+    console.log(fibsArr)}
+   //4.4
+ {   let x = [3, 10];
+    let y = [];
+    x[77] = 7;
+
+    for (let i in x) {
+        y.push(Math.pow(x[i], 2))
+    }
+    console.log(y)}
+  //5.1
+    
+  {var s = 'Мы знаем, что монохромный цвет - это градации серого';
+    var txt = 'хром';
+    var word;
+    
+    let newArr = s.split(' ')
+
+    let res = newArr.map((item, i) => item.indexOf(txt) >= 0 ? i : -1).filter(item => item >= 0)
+
+    word = newArr[res]
+
+    console.log(word)}
+ //5.2
+{ const substrCount = (input, needle, offset, length) => {
+  let newStr = input.slice(offset)  
+  console.log(newStr)
+  
+  return newStr.slice(0, length).split(needle).length-1
+
+}
+
+substrCount ('Good on on on on Golly on on Miss on on on on Molly', 'on', 7, 10);}
+ //5.3
+ {const strPad = (input, fullLen, fillStr, fillType) => {
+    
+    if(fillType === 'FILL_LEFT') {
+        return input.padStart(fullLen, fillStr)
+    } else  if(fillType === 'FILL_BOTH') {
+        let lengOfSymb = (fullLen - input.length) / 2
+        let lengForAdd = fullLen - lengOfSymb
+        
+        let res =  input.padStart(lengForAdd, fillStr)
+        return res.padEnd(fullLen, fillStr)
+
+    } else {
+        return input.padEnd(fullLen, fillStr)
+    }
+
+}
+
+    console.log(strPad('star', 10, '_*_'))
+    console.log(strPad('star', 8, '_*_', 'FILL_LEFT'))
+    console.log(strPad('star', 8, '*', 'FILL_BOTH'))}
+ </script>
+
+  
+
 </body>
 </html>
