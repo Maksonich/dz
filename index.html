@@ -46,7 +46,7 @@ function openWnd(p) {
 	function writeToDocument() {
 			document.write('<html><head><style type="text/css"> body{background-color:#369;color:#fff;font:16px calibri, sans-serif;</style></head></html>')
 			document.write('<body><p>Текст параграфа</p></body>')
-			aler()
+			alert()
 			/*
 			1. Запишите в документ дочернего окна содержание, 
 				состоящее из полного набора элементов, включая html, head, body, title
@@ -75,8 +75,13 @@ function closeWnd() {
 <p class="p1"><a href="javascript:openWnd('width=400,height=200,top=400,left=800');">Открыть окно</a></p>
 <p class="p3"><a href="javascript:writeToDocument();">Заполнить окно</a></p>
 <p class="p2"><a href="javascript:closeWnd();">Закрыть окно</a></p>
+
+
+<a href="./Task5/Task5_1.html">5.1</a>
+<a href="./Task5/Task5_2.html">5.2</a>
+<a href="./Task5/Task5_3_optional.html">5.3</a>
 <script  type="text/javascript">
-	function aler(){
+	function alert(){
 	 	alert(opener.name) }
 </script>
 </body>
